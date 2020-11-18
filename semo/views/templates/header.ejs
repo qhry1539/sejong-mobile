@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>세종대학교 모바일 SEMO 세모</title>
+
+  <meta property="og:url" content="http://sejong-mobile.com">
+  <meta property="og:title" content="세종대학교 모바일 SEMO 세모">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="http://sejong-mobile.com/assets/images/og.png">
+  <meta property="og:description" content="SEMO는 세종대학교 모바일의 줄임말로, 세종대학교에 대한 정보를 편리하게 제공하는 챗봇 서비스입니다.">
+  <meta name="description" content="SEMO는 세종대학교 모바일의 줄임말로, 세종대학교에 대한 정보를 편리하게 제공하는 챗봇 서비스입니다.">
+  <meta name="keywords" content="세종대학교,대학교,챗봇,게시판,공지사항,일반공지,입학,학사,국제교류,국제교류,취업,장학,교내모집,학사일정">
+  <link rel="canonical" href="http://sejong-mobile.com">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+  <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#2cddb4">
+  <meta name="msapplication-TileColor" content="#2cddb4">
+  <meta name="theme-color" content="#5ce4c5">
+  <meta name="msapplication-navbutton-color" content="#5ce4c5">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#5ce4c5">
+
+  <!-- styles  -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <!-- socket.io -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+  <!-- jQuery Bezier's Curve -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-bez@1.0.11/lib/jquery.bez.min.js"></script>
+
+  <!-- plugins -->
+  <!-- slick -->
+  <link rel="stylesheet" href="/assets/plugins/slick/slick/slick.css">
+  <link rel="stylesheet" href="/assets/plugins/slick/slick/slick-theme.css">
+  <script src="/assets/plugins/slick/slick/slick.js"></script>
+  <!-- retina.js -->
+  <script src="/assets/js/retina.min.js"></script>
+
+  <!-- javascript -->
+  <script src="/assets/js/app.js"></script>
+  <script src="/assets/js/chang.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+  <script type="text/javascript">
+    WebFontConfig = {
+      active: function() {
+        sessionStorage.fonts = true;
+      },
+      custom: {
+          families: ['NanumBarunGothic', 'Material Icons'],
+          urls: ['https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@1.0/nanumbarungothicsubset.css', 'https://fonts.googleapis.com/icon?family=Material+Icons']
+      },
+    };
+    (function() {
+          var wf = document.createElement('script');
+          wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';
+          wf.type = 'text/javascript';
+          wf.async = 'true';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(wf, s);
+      })();
+   </script>
+</head>
+<body>
+  <div class="outerBody">
+    <div class="innerBody">
+      <div class="leftSideNavContainer">
+        <div class="leftSideNavLogoContainer">
+          <a href="/" class="leftSideNavLogo">
+            <img src="/assets/images/logo-horizontal-white.png">
+          </a>
+        </div>
+        <ul class="leftSideNav">
+            <li>
+              <a href="/postList/1/1">
+                <div class="iconContainer">
+                  <i class="material-icons">cloud_queue</i>
+                </div>
+                <span class="title">일반공지</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/2/1">
+                <div class="iconContainer">
+                  <i class="material-icons">group_add</i>
+                </div>
+                <span class="title">입학</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/3/1">
+                <div class="iconContainer">
+                  <i class="material-icons">account_balance</i>
+                </div>
+                <span class="title">학사</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/4/1">
+                <div class="iconContainer">
+                  <i class="material-icons">public</i>
+                </div>
+                <span class="title">국제교류 K</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/5/1">
+                <div class="iconContainer">
+                  <i class="material-icons">public</i>
+                </div>
+                <span class="title">국제교류 E</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/6/1">
+                <div class="iconContainer">
+                  <i class="material-icons">card_travel</i>
+                </div>
+                <span class="title">취업</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/7/1">
+                <div class="iconContainer">
+                  <i class="material-icons">school</i>
+                </div>
+                <span class="title">장학</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/8/1">
+                <div class="iconContainer">
+                  <i class="material-icons">group_work</i>
+                </div>
+                <span class="title">교내모집</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/10/1">
+                <div class="iconContainer">
+                  <i class="material-icons">person_pin</i>
+                </div>
+                <span class="title">휴머니티 칼리지</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/11/1">
+                <div class="iconContainer">
+                  <i class="material-icons">local_library</i>
+                </div>
+                <span class="title">학술정보원</span>
+              </a>
+            </li>
+            <li>
+              <a href="/events">
+                <div class="iconContainer">
+                  <i class="material-icons">today</i>
+                </div>
+                <span class="title">학사일정</span>
+              </a>
+            </li>
+            <li>
+              <a href="/help">
+                <div class="iconContainer">
+                  <i class="material-icons">help</i>
+                </div>
+                <span class="title">도움말</span>
+              </a>
+            </li>
+            <li>
+              <a href="/contact">
+                <div class="iconContainer">
+                  <i class="material-icons">info</i>
+                </div>
+                <span class="title">이용문의</span>
+              </a>
+            </li>
+        </ul>
+      </div>

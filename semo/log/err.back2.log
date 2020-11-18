@@ -1,0 +1,15 @@
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+TypeError: Cannot read property 'cate_source_type' of undefined
+    at Query.db.query (/home/changhyun/project/semo/index.js:191:14)
+    at Query.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at Query._callback (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:468:16)
+    at Query.Sequence.end (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)

@@ -1,0 +1,151 @@
+<% include templates/header.ejs %>
+  
+  <script>
+    $(document).ready(function() {
+      app.main.init();
+    });
+  </script>
+
+  <div class="container main">
+    <div class="headerContainer">
+      <div class="iconContainer left"><i class="material-icons">arrow_back</i></div>
+      <div class="title"><a href="/main">SE:MO</a></div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="section">
+        <div class="sectionTitleContainer">
+          <h3 class="title">Recommended</h3>
+          <a href="/recommended" class="viewDetails">더보기</a>
+        </div>
+        <div class="sectionContentContainer">
+          <ul class="list">
+            <% recommended.forEach((post, index) => { %>
+            <li>
+              <span class="index"><%=index + 1%></span>
+              <a href="/postContent/<%=post.post_idx%>" class="title"><span><%=post.post_title%></span></a>
+              <span class="writer"><%=post.post_writer%></span>
+            </li>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="sectionTitleContainer">
+          <h3 class="title">Categories</h3>
+        </div>
+        <div class="sectionContentContainer">
+          <ul class="categories">
+            <li>
+              <a href="/postList/1/1">
+                <div class="iconContainer">
+                  <i class="material-icons">cloud_queue</i>
+                </div>
+                <span class="title">일반공지</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/2/1">
+                <div class="iconContainer">
+                  <i class="material-icons">group_add</i>
+                </div>
+                <span class="title">입학</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/3/1">
+                <div class="iconContainer">
+                  <i class="material-icons">account_balance</i>
+                </div>
+                <span class="title">학사</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/4/1">
+                <div class="iconContainer">
+                  <i class="material-icons">public</i>
+                </div>
+                <span class="title">국제교류 K</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/5/1">
+                <div class="iconContainer">
+                  <i class="material-icons">public</i>
+                </div>
+                <span class="title">국제교류 E</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/6/1">
+                <div class="iconContainer">
+                  <i class="material-icons">card_travel</i>
+                </div>
+                <span class="title">취업</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/7/1">
+                <div class="iconContainer">
+                  <i class="material-icons">school</i>
+                </div>
+                <span class="title">장학</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/8/1">
+                <div class="iconContainer">
+                  <i class="material-icons">group_work</i>
+                </div>
+                <span class="title">교내모집</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/10/1">
+                <div class="iconContainer">
+                  <i class="material-icons">person_pin</i>
+                </div>
+                <span class="title">휴머니티 칼리지</span>
+              </a>
+            </li>
+            <li>
+              <a href="/postList/11/1">
+                <div class="iconContainer">
+                  <i class="material-icons">local_library</i>
+                </div>
+                <span class="title">학술정보원</span>
+              </a>
+            </li>
+            <li>
+              <a href="/events">
+                <div class="iconContainer">
+                  <i class="material-icons">today</i>
+                </div>
+                <span class="title">학사일정</span>
+              </a>
+            </li>
+            <li>
+              <a href="/help">
+                <div class="iconContainer">
+                  <i class="material-icons">help</i>
+                </div>
+                <span class="title">도움말</span>
+              </a>
+            </li>
+            <li>
+              <a href="/contact">
+                <div class="iconContainer">
+                  <i class="material-icons">info</i>
+                </div>
+                <span class="title">이용문의</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% include templates/footer.ejs %>

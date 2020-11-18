@@ -1,0 +1,224 @@
+ReferenceError: /home/changhyun/project/semo/views/postContent.ejs:13
+    11|         <div class="postContentHeader">
+    12|           <span class="index"><%=data.post_idx%></span>
+ >> 13|           <span style="display: none;" class="date yyyymmdd"><%=post.post_date.split(" ")[0]%></span>
+    14|           <h3 class="title"><%=data.post_title%><span class="pipe">|</span><span class="writer"><%=data.post_writer%></span></h3>
+    15|         </div>
+    16| 
+
+post is not defined
+    at eval (eval at exports.compile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:32:670)
+    at eval (eval at exports.compile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:34:35)
+    at /home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:250:15
+    at Object.exports.render (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:288:13)
+    at Object.exports.renderFile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:318:20)
+    at View.module.exports [as engine] (/home/changhyun/project/semo/node_modules/ejs-locals/index.js:85:7)
+    at View.render (/home/changhyun/project/semo/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/changhyun/project/semo/node_modules/express/lib/application.js:640:10)
+    at Function.render (/home/changhyun/project/semo/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/home/changhyun/project/semo/node_modules/express/lib/response.js:1008:7)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+SyntaxError: Unexpected token < in JSON at position 0
+    at JSON.parse (<anonymous>)
+    at Query.db.query (/home/changhyun/project/semo/index.js:203:37)
+    at Query.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at Query._callback (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:468:16)
+    at Query.Sequence.end (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+/home/changhyun/project/semo/index.js:227
+const curse = ["시1발", "새끼", "럼들", "시부럴", "시뷰럴", "씨부럴", "씨뷰럴", "시부렬", "시뷰렬", "씨부렬", "씨뷰렬", "닝기리", "스벌", "호로잡", "개공감", "개나 소나", "개나소나", "개넷", "개년", "개념빠가", "개독", "개련", "개무시", "개무식", "개민폐", "개별로", "개부랄", "개빡", "개사이다", "개새끼", "개 새끼", "죶", "개섹", "개소리", "개싫", "개자식", "개짜증", "개짱", "개짲", "개쩐", "개쩔", "개쩔", "계새끼", "tlqkf", "wlfkf", "qudtls", "엿같", "젖 같", "졏 같", "닥쳐", "에라이퉤", "에라이 퉤", "에라이퉷", "에라이 퉷", "슈벌", "슈우벌", "빻은", "빻았", "오진다", "오져", "골 빈", "골1빈", "골빈", "글러 먹", "글러먹", "관.종", "관1종", "관종", "괘새끼", "그1켬", "그따위", "그지 같", "그지같", "그켬", "극1혐", "극혐", "기레기", "기자레기", "껒여", "꼬라지", "꼴�
+
+SyntaxError: Unexpected string
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+/home/changhyun/project/semo/index.js:227
+const curse = ["시1발", "새끼", "럼들", "시부럴", "시뷰럴", "씨부럴", "씨뷰럴", "시부렬", "시뷰렬", "씨부렬", "씨뷰렬", "닝기리", "스벌", "호로잡", "개공감", "개나 소나", "개나소나", "개넷", "개년", "개념빠가", "개독", "개련", "개무시", "개무식", "개민폐", "개별로", "개부랄", "개빡", "개사이다", "개새끼", "개 새끼", "죶", "개섹", "개소리", "개싫", "개자식", "개짜증", "개짱", "개짲", "개쩐", "개쩔", "개쩔", "계새끼", "tlqkf", "wlfkf", "qudtls", "엿같", "젖 같", "졏 같", "닥쳐", "에라이퉤", "에라이 퉤", "에라이퉷", "에라이 퉷", "슈벌", "슈우벌", "빻은", "빻았", "오진다", "오져", "골 빈", "골1빈", "골빈", "글러 먹", "글러먹", "관.종", "관1종", "관종", "괘새끼", "그1켬", "그따위", "그지 같", "그지같", "그켬", "극1혐", "극혐", "기레기", "기자레기", "껒여", "꼬라지", "꼴�
+
+SyntaxError: Unexpected string
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+/home/changhyun/project/semo/index.js:227
+const curse = ["시1발", "새끼", "럼들", "시부럴", "시뷰럴", "씨부럴", "씨뷰럴", "시부렬", "시뷰렬", "씨부렬", "씨뷰렬", "닝기리", "스벌", "호로잡", "개공감", "개나 소나", "개나소나", "개넷", "개년", "개념빠가", "개독", "개련", "개무시", "개무식", "개민폐", "개별로", "개부랄", "개빡", "개사이다", "개새끼", "개 새끼", "죶", "개섹", "개소리", "개싫", "개자식", "개짜증", "개짱", "개짲", "개쩐", "개쩔", "개쩔", "계새끼", "tlqkf", "wlfkf", "qudtls", "엿같", "젖 같", "졏 같", "닥쳐", "에라이퉤", "에라이 퉤", "에라이퉷", "에라이 퉷", "슈벌", "슈우벌", "빻은", "빻았", "오진다", "오져", "골 빈", "골1빈", "골빈", "글러 먹", "글러먹", "관.종", "관1종", "관종", "괘새끼", "그1켬", "그따위", "그지 같", "그지같", "그켬", "극1혐", "극혐", "기레기", "기자레기", "껒여", "꼬라지", "꼴�
+
+SyntaxError: Unexpected string
+    at createScript (vm.js:80:10)
+    at Object.runInThisContext (vm.js:139:10)
+    at Module._compile (module.js:616:28)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+    at Function.Module._load (module.js:497:3)
+    at Function.Module.runMain (module.js:693:10)
+    at startup (bootstrap_node.js:191:16)
+    at bootstrap_node.js:612:3
+TypeError: /home/changhyun/project/semo/views/postList.ejs:5
+    3|     <div class="headerContainer">
+    4|       <div class="iconContainer left goHome"><i class="material-icons">home</i></div>
+ >> 5|       <div class="title"><%=type == 0 ? data[0].cate_title : keyword%></div>
+    6|       <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    7|     </div>
+    8|     <div class="contentContainer">
+
+Cannot read property 'cate_title' of undefined
+    at eval (eval at exports.compile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:32:263)
+    at eval (eval at exports.compile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:237:14), <anonymous>:38:35)
+    at /home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:250:15
+    at Object.exports.render (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:288:13)
+    at Object.exports.renderFile (/home/changhyun/project/semo/node_modules/ejs-locals/node_modules/ejs/lib/ejs.js:318:20)
+    at View.module.exports [as engine] (/home/changhyun/project/semo/node_modules/ejs-locals/index.js:85:7)
+    at View.render (/home/changhyun/project/semo/node_modules/express/lib/view.js:135:8)
+    at tryRender (/home/changhyun/project/semo/node_modules/express/lib/application.js:640:10)
+    at Function.render (/home/changhyun/project/semo/node_modules/express/lib/application.js:592:3)
+    at ServerResponse.render (/home/changhyun/project/semo/node_modules/express/lib/response.js:1008:7)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+TypeError: Cannot read property 'cate_source_type' of undefined
+    at Query.db.query (/home/changhyun/project/semo/index.js:191:14)
+    at Query.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at Query._callback (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:468:16)
+    at Query.Sequence.end (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)
+    at Query._handleFinalResultPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:139:8)
+    at Query.EofPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:123:8)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::3000
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1355:14)
+    at listenInCluster (net.js:1396:12)
+    at Server.listen (net.js:1480:7)
+    at Object.<anonymous> (/home/changhyun/project/semo/index.js:308:6)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+Error: ER_WRONG_FIELD_WITH_GROUP: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'cs_semo.posts.post_idx' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+    at Query.Sequence._packetToError (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:200:25)
+    at getCount.then (/home/changhyun/project/semo/index.js:133:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY post_date DESC LIMIT 0, 15' at line 1
+    at Query.Sequence._packetToError (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:200:25)
+    at getCount.then (/home/changhyun/project/semo/index.js:133:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BYa ORDER BY post_date DESC LIMIT 0, 15' at line 1
+    at Query.Sequence._packetToError (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:200:25)
+    at getCount.then (/home/changhyun/project/semo/index.js:133:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
+Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY post_date DESC LIMIT 0, 15' at line 1
+    at Query.Sequence._packetToError (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/sequences/Query.js:77:18)
+    at Protocol._parsePacket (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:278:23)
+    at Parser.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Parser.js:76:12)
+    at Protocol.write (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:91:28)
+    at Socket.<anonymous> (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:502:10)
+    at emitOne (events.js:116:13)
+    at Socket.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    --------------------
+    at Protocol._enqueue (/home/changhyun/project/semo/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at Connection.query (/home/changhyun/project/semo/node_modules/mysql/lib/Connection.js:200:25)
+    at getCount.then (/home/changhyun/project/semo/index.js:133:7)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7)
+events.js:183
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE :::3000
+    at Object._errnoException (util.js:992:11)
+    at _exceptionWithHostPort (util.js:1014:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1355:14)
+    at listenInCluster (net.js:1396:12)
+    at Server.listen (net.js:1480:7)
+    at Object.<anonymous> (/home/changhyun/project/semo/index.js:308:6)
+    at Module._compile (module.js:652:30)
+    at Object.Module._extensions..js (module.js:663:10)
+    at Module.load (module.js:565:32)
+    at tryModuleLoad (module.js:505:12)

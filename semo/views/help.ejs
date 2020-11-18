@@ -1,0 +1,51 @@
+<% include templates/header.ejs %>
+
+  <script>
+    $(document).ready(function() {
+      app.help.init();
+    });
+  </script>
+
+  <div class="container help">
+    <div class="headerContainer">
+      <div class="iconContainer left goHome"><i class="material-icons">home</i></div>
+      <div class="title">도움말</div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="section">
+        <div class="sectionTitleContainer">
+          <h3 class="title">도움말</h3>
+          <p class="description">
+            SE:MO를 이용하는 방법이에요.<br>
+            우측 하단의 채팅 아이콘을 눌러 쉽게 정보를 찾아보세요 :)
+          </p>
+        </div>
+        <div class="sectionContentContainer">
+          <div class="helpContainer">
+            <div class="helpSlider">
+              <div class="helpSlide">
+                <img class="icon" src="../assets/images/help-0.png">
+              </div>
+              <div class="helpSlide">
+                <img class="icon" src="../assets/images/help-1.png">
+              </div>
+              <div class="helpSlide">
+                <img class="icon" src="../assets/images/help-2.png">
+              </div>
+              <div class="helpSlide">
+                <img class="icon" src="../assets/images/help-3.png">
+              </div>
+              <div class="helpSlide">
+                <img class="icon" src="../assets/images/help-4.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<% include templates/footer.ejs %>

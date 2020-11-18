@@ -1,0 +1,81 @@
+<% include templates/header.ejs %>
+  <div class="container chat">
+    <div class="headerContainer">
+      <div class="iconContainer left"><i class="material-icons">close</i></div>
+      <div class="title">CHAT</div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="chatContainer">
+        <div class="chatContentContainer">
+
+          <div class="messageContainer responder">
+            <div class="profileImageContainer"><i class="material-icons">tag_faces</i></div>
+            <div class="messageBox">
+              <div class="userTitle">
+                <span>세모</span>
+              </div>
+              <div class="messageText">
+                <p>
+                  안녕하세요, 세모에요 :)<br />
+                  원하는 키워드로 무엇이든 물어보세요!
+                </p>
+              </div>
+              <div class="responseResultContainer">
+                <ul class="responseList">
+                  <li><a href="#">"계절학기"</a></li>
+                  <li><a href="#">"등록금"</a></li>
+                  <li><a href="#">"학사일정"</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="messageContainer user">
+            <div class="profileImageContainer"><i class="material-icons">tag_faces</i></div>
+            <div class="messageBox">
+              <div class="userTitle">
+                <span>{랜덤 형용사} {랜덤 명사}</span>
+              </div>
+              <div class="messageText">
+                <p>
+                  계절학기
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="messageContainer responder">
+            <div class="profileImageContainer"><i class="material-icons">tag_faces</i></div>
+            <div class="messageBox">
+              <div class="userTitle">
+                <span>세모</span>
+              </div>
+              <div class="messageText">
+                <p>
+                  원하는 "계절학기" 정보를 선택하세요 :)
+                </p>
+              </div>
+              <div class="responseResultContainer">
+                <ul class="responseList">
+                  <li><a href="#">2018학년도 동계 계절학기 운영 계획</a></li>
+                  <li><a href="#">2018학년도 동계 계절학기 개설희망 교과목 수요 조사</a></li>
+                  <li><a href="#">2018 동계계절학기 학점교류 안내 (본교→타교: 학교 추가)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="chatInputContainer">
+          <input type="text" name="messageInput" placeholder="원하는 내용을 입력하세요.">
+          <span class="voiceInput"><i class="material-icons">mic</i></span>
+          <span class="send">보내기</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% include templates/footer.ejs %>

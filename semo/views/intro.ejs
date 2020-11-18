@@ -1,0 +1,56 @@
+<% include templates/header.ejs %>
+
+  <script>
+    $(document).ready(function() {
+      app.intro.init();
+    });
+  </script>
+
+  <div class="container intro">
+    <div></div>
+    <div class="introSlider">
+      <div class="introSlide">
+        <div class="circularContainer outside">
+          <div class="circularContainer inside">
+            <img class="icon" src="../assets/images/logo-symbol-only.png" alt="" data-rjs="2">
+          </div>
+        </div>
+        <span class="title">SE:MO</span>
+        <p class="description">
+          SE:MO는 Sejong univ. Mobile의 줄임말로<br>
+          세종대학교에 대한 정보를<br>
+          편리하게 제공하는 챗봇 서비스입니다.
+        </p>
+      </div>
+      <div class="introSlide">
+        <div class="circularContainer outside">
+          <div class="circularContainer inside">
+            <img class="icon" src="../assets/images/chat-symbol.png" alt="" data-rjs="2">
+          </div>
+        </div>
+        <span class="title">챗봇</span>
+        <p class="description">
+          우측하단의 채팅 버튼을 누르고<br>
+          세모에게 원하는 메세지를 보내세요.<br>
+          누구보다 빠르게 답변해드릴게요 :)
+        </p>
+      </div>
+      <div class="introSlide">
+        <div class="circularContainer outside">
+          <div class="circularContainer inside">
+            <img class="icon" src="../assets/images/feedback-symbol.png" alt="" data-rjs="2">
+          </div>
+        </div>
+        <span class="title">피드백</span>
+        <p class="description">
+          세모는 언제나 발전할 준비가 되어있어요.<br>
+          피드백으로 더 똑똑한 세모가 될게요 :)<br>
+          화면 가장아래의 피드백 보내기를 이용해주세요.
+        </p>
+      </div>
+    </div>
+    <div class="introSliderButton skip"><a href="javascript:void(0)">skip</a></div>
+    <div class="introSliderButton next">next</div>
+    <div class="introSliderButton done"><a href="javascript:void(0)">done</a></div>
+    <div></div>
+  </div>

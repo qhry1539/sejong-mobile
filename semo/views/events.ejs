@@ -1,0 +1,78 @@
+<% include templates/header.ejs %>
+
+  <!-- calendario -->
+  <link rel="stylesheet" href="/assets/plugins/Calendario/css/calendar.css">
+  <link rel="stylesheet" href="/assets/plugins/Calendario/css/custom_4.css">
+  <script src="/assets/plugins/Calendario/js/jquery.calendario.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      app.events.init();
+    })
+  </script>
+
+  <div class="container events">
+    <div class="headerContainer">
+      <div class="iconContainer left goBack"><i class="material-icons">arrow_back</i></div>
+      <div class="title">학사일정</div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="section">
+        <div class="sectionTitleContainer">
+          <h3 class="title">학사일정</h3>
+          <p class="description">
+            세종대학교의 학사일정입니다.<br>
+            우측 하단의 채팅 아이콘을 눌러 쉽게 정보를 찾아보세요 :)
+          </p>
+        </div>
+        <div class="sectionContentContainer">
+          <div class="calendarContainer">
+            <div class="custom-header clearfix">
+              <nav>
+                <span id="custom-prev" class="custom-prev"></span>
+                <span id="custom-next" class="custom-next"></span>
+              </nav>
+              <h3 id="custom-year" class="custom-year">2018</h3>
+              <h2 id="custom-month" class="custom-month">November</h2>
+            </div>
+            <div id="calendar" class="fc-calendar-container"></div>
+          </div>
+          <div class="eventListContainer">
+            <ul class="eventList">
+              <li class="eventListHeader">
+                <span class="title">전체일정</span>
+              </li>
+              <% var currentMonth = 0 %>
+              <% events.forEach((event) => { %>
+              <%
+                if(event.start_year + event.start_month + event.start_day == event.end_year + event.end_month + event.end_day) {
+                  var date = event.start_month + "월 " + event.start_day + "일"
+                } else {
+                  var date = event.start_month + "월 " + event.start_day + "일" + "-" + event.start_month + "월 " + event.start_day + "일"
+                }
+              %>
+              <%
+                if(event.start_month == currentMonth) {
+              %>
+              <%
+                } else {
+                  currentMonth = event.start_month
+              %>
+                <span class="eventMonth"><%=event.start_month%>월</span>
+              <% } %>
+              <li>
+                <i class="material-icons">calendar_today</i>
+                <span class="date"><%=date%></span>
+                <span class="title"><%=event.event_title%></span>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% include templates/footer.ejs %>

@@ -1,0 +1,53 @@
+<% include templates/header.ejs %>
+  <div class="container postList">
+    <div class="headerContainer">
+      <div class="iconContainer left goHome"><i class="material-icons">home</i></div>
+      <div class="title"><%=type == 0 ? data[0].cate_title : keyword%></div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="section">
+        <div class="sectionTitleContainer">
+          <h3 class="title"><%=type == 0 ? data[0].cate_title : keyword%></h3>
+          <p class="description">
+            세종대학교의 <strong><%=type == 0 ? data[0].cate_title : keyword%></strong> 정보입니다.<br>
+            우측 하단의 채팅 아이콘을 눌러 쉽게 정보를 찾아보세요 :)
+          </p>
+        </div>
+        <div class="sectionContentContainer">
+          <ul class="list">
+            <% data.forEach((post) => { %>
+            <li>
+              <span class="index"><i class="material-icons">chevron_right</i></span>
+              <a href="/postContent/<%=post.post_idx%>" class="title"><span><%=post.post_title%></span></a>
+              <span class="writer"><%=post.post_writer%></span>
+              <span class="date yyyymmdd"><%=post.post_date.split(" ")[0]%></span>
+              <span class="date mmdd"><%=post.post_date.split("-")[1] + '/' + post.post_date.split("-")[2].split(" ")[0]%></span>
+            </li>
+            <% }) %>
+          </ul>
+
+          <% if(pagination) { %>
+          <div class="paginationContainer">
+            <ul class="pagination">
+              <% if(pagination.prevActive) { %><li><a href="<%=pagination.firstPage - 1%>"><i class="material-icons">chevron_left</i></a></li>
+              <% } else { %><li class="disabled"><a href="javascript:void(0)"><i class="material-icons">chevron_left</i></a></li><% } %>
+              <%
+              for(var i = pagination.firstPage ; i <= pagination.lastPage ; i++) {
+                let active = i == pagination.currentPage ? "active" : ""
+                let disabled = i > pagination.maxPage ? "disabled" : ""
+              %>
+              <li class="<%=active%> <%=disabled%>"><a href="<%=disabled ? 'javascript:void(0)' : i%>"><span><%=i%></span></a></li>
+              <% } %>
+              <% if(pagination.nextActive) { %><li><a href="<%=pagination.lastPage + 1%>"><i class="material-icons">chevron_right</i></a></li>
+              <% } else { %><li class="disabled"><a href="javascript:void(0)"><i class="material-icons">chevron_right</i></a></li><% } %>
+            </ul>
+          </div>
+          <% } %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% include templates/footer.ejs %>

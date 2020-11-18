@@ -1,0 +1,88 @@
+<% include templates/header.ejs %>
+  <div class="container postContainer">
+    <div class="headerContainer">
+      <div class="iconContainer left goBack"><i class="material-icons">arrow_back</i></div>
+      <div class="title"><%=data.cate_title%></div>
+      <div class="iconContainer right search"><i class="material-icons">search</i></div>
+    </div>
+    <div class="contentContainer">
+
+      <div class="section">
+        <div class="postContentHeader">
+          <span class="index"><%=data.post_idx%></span>
+          <span class="date yyyymmdd"><%=data.post_date.split("-")[0] + "년 " + data.post_date.split("-")[1] + "월 " + data.post_date.split("-")[2].split(" ")[0] + "일"%></span>
+          <h3 class="title"><%=data.post_title%><span class="pipe">|</span><span class="writer"><%=data.post_writer%></span></h3>
+        </div>
+
+        <div class="sectionContentContainer">
+          <% if(data.post_attach.length) { %>
+          <ul class="attachments">
+            <% data.post_attach.forEach((attach) => { %>
+            <li>
+              <i class="material-icons">attachment</i>
+              <a href="<%=attach.url%>" class="title"><span><%=attach.title%></span></a>
+            </li>
+            <% }) %>
+          </ul>
+          <% } %>
+
+          <div class="postContent">
+            <%- data.post_content %>
+          </div>
+
+          <div class="buttonContainer">
+            <a href="<%=data.post_original_url%>" class="btn" target="_blank"><i class="material-icons">pageview</i> 원본보기</a>
+            <a href="#" class="btn shareThisPage"><i class="material-icons">share</i> 공유하기</a>
+          </div>
+        </div>
+
+        <div class="shareContainer">
+          <input type="text" class="url" value="http://www.sejong-mobile.com/postContent/<%=data.post_idx%>" readonly>
+          <ul class="shareList">
+            <li><a href="javascript:void(0);" class="copyURL"><span class="iconContainer"><i class="material-icons">link</i></span><span class="iconTitle">링크복사</span></a></li>
+            <li><a href="javascript:void(0);" id="kakao-share"><div class="imageIconContainer"><img src="/assets/images/icon-kakao.png" alt=""></div><span class="iconTitle">카카오톡</span></a></li>
+            <li><a href="http://www.facebook.com/sharer/sharer.php?u=http://www.sejong-mobile.com/postContent/<%=data.post_idx%>" target="_blank"><div class="imageIconContainer"><img src="/assets/images/icon-facebook.png" alt=""></div><span class="iconTitle">페이스북</span></a></li>
+            <li><a href="mailto:?subject=<%=data.post_title%>&body=<%=data.cate_title%> 링크: http://www.sejong-mobile.com/postContent/<%=data.post_idx%>"><span class="iconContainer"><i class="material-icons">email</i></span><span class="iconTitle">이메일</span></a></li>
+          </ul>
+          <button class="closeShare"><i class="material-icons">close</i> 닫기</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- kakao -->
+  <script src="http://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <script type='text/javascript'>
+    //<![CDATA[
+      // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+      Kakao.init('2bd6915e5bd099703f8ca6d040ccc1d1');
+      // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+      Kakao.Link.createDefaultButton({
+        container: '#kakao-share',
+        objectType: 'feed',
+        content: {
+          title: '[<%=data.cate_title%>] <%=data.post_title%>',
+          description: $('.postContent').text().trim().slice(0, 60) + '...',
+          imageUrl: 'http://sejong-mobile.com/assets/images/og.png',
+          link: {
+            mobileWebUrl: 'http://www.sejong-mobile.com/postContent/<%=data.post_idx%>',
+            webUrl: 'http://www.sejong-mobile.com/postContent/<%=data.post_idx%>'
+          }
+        },
+        social: {
+          sharedCount: <%=data.post_view_count%>
+        },
+        buttons: [
+          {
+            title: '웹으로 보기',
+            link: {
+              mobileWebUrl: 'http://www.sejong-mobile.com/postContent/<%=data.post_idx%>',
+              webUrl: 'http://www.sejong-mobile.com/postContent/<%=data.post_idx%>'
+            }
+          }
+        ]
+      });
+    //]]>
+  </script>
+<% include templates/footer.ejs %>
